@@ -17,6 +17,8 @@ public class NullConditionalAssignment
         var addressPiter = new Address() { Buildings = new int[1] };
         addressPiter?.Buildings?[0] = 1035; // Присваивание выполнится, т.к. address и building не равны null
         Console.WriteLine(addressPiter?.Buildings[0]);
+
+        PrintCity();
     }
 
     public class Address
@@ -24,4 +26,20 @@ public class NullConditionalAssignment
         public string Street { get; set; } = null;
         public int[] Buildings { get; set; }
     }
+
+    public static void PrintCity()
+    {
+        var city = new City();
+
+        city?.Name ??= "Arbat";
+        Console.WriteLine(city.Name);
+    }
+
+    public class City()
+    {
+        public string? Name { get; set; } = null;
+    }
+
+
+
 }
