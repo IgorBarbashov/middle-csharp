@@ -4,7 +4,7 @@ namespace WebApplication.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class CustomerController : ControllerBase
+public class CustomersController : ControllerBase
 {
 
     [HttpGet]
